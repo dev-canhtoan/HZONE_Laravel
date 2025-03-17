@@ -1,0 +1,80 @@
+.profile-page {
+    background-color: $second-color;
+    .profile-page-content {
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .form-control {
+                border: 2px solid $third-color;
+                height: 40px;
+                padding-left: 5px;
+            }
+
+            p {
+                text-align: center;
+                color: $text-color;
+                margin: 0px;
+            }
+
+            .login-btn {
+                @extend .my-btn1;
+
+                &:hover {
+                    background-color: $main-color;
+                    border: 2px solid $third-color;
+                    color: $primary-color;
+                }
+            }
+
+            .nav-signup {
+                @extend .my-btn1;
+                line-height: 2;
+                text-align: center;
+                background-color: $ninth-color;
+                width: 100%;
+
+                &:hover {
+                    background-color: $main-color;
+                    border: 2px solid $third-color;
+                    color: $ninth-color;
+                }
+            }
+            a {
+                text-align: center;
+                padding-top: 3px;
+            }
+        }
+
+        .order-list {
+            .table {
+                .status {
+                    #pending {
+                        color: $eleven-color;
+                    }
+
+                    #in-progress {
+                        color: $primary-color2;
+                    }
+
+                    #delivered {
+                        color: $ninth-color;
+                    }
+
+                    #cancelled {
+                        color: $sixth-color;
+                    }
+                }
+            }
+            .pagination {
+                margin-top: 10px;
+                margin-right: 0;
+            }
+        }
+    }
+}

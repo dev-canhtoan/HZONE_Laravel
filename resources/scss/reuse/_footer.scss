@@ -1,0 +1,83 @@
+footer {
+    height: 324px;
+    background-color: $main-color;
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5em;
+        padding: 40px 0px;
+
+        li {
+            list-style: none;
+            color: $text-color;
+        }
+
+        .logo-clm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 20em;
+
+            .logo {
+                @extend .main-logo;
+                background-color: $primary-color;
+                border-radius: 8px;
+                padding: 0px 5px;
+            }
+
+            p {
+                color: $text-color;
+            }
+        }
+        iframe {
+            width: 40%;
+            height: 200px;
+            border-radius: 8px;
+        }
+        .payment-clm {
+            .payment-layout {
+                display: grid;
+                grid-template-columns: 0.5fr 0.5fr 0.5fr;
+                padding-bottom: 10px;
+            }
+
+            .payment-logo {
+                width: 60%;
+            }
+            div {
+                form{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0px;
+                    input {
+                        padding-left: 5px;
+                        height: 40px;
+                        border-radius: 8px 0px 0px 8px;
+                        border: 1px solid $text-color;
+                    }
+                    .my-btn1 {
+                        height: 41px;
+                        padding: 0px 5px;
+                        border-radius: 0px 8px 8px 0px;
+                    }
+                }
+            }
+        }
+    }
+    .copy-right {
+        background-color: $third-color;
+        height: 30px;
+        .copy-right-content {
+            display: flex;
+            flex-direction: row;
+            padding-top: 8px;
+            margin: $main-margin;
+            color: $text-color;
+            position: absolute;
+            white-space: nowrap; 
+            animation: moveRight 15s linear infinite; 
+        }
+    }
+}

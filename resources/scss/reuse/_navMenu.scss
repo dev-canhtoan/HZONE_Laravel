@@ -1,0 +1,34 @@
+.nav-menu {
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    border-right:2px solid $third-color;
+    
+    a {
+        &.active {
+            background-color: $primary-color;
+            color: $main-color;
+            border-radius: 0px 8px 8px 0px;
+        }
+        color: black;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+        &:hover {
+            background-color: $text-color;
+            color: $main-color;
+            border-radius: 0px 8px 8px 0px;
+        }
+        
+        .fst-clm {
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+        .snd {
+            float: left;
+            width: 80%;
+        }
+    }
+}

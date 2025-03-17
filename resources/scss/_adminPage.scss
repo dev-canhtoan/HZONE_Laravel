@@ -1,0 +1,275 @@
+.admin-page {
+    background-color: $second-color;
+    padding: 20px;
+    width: calc(100% - 5vw);
+    height: auto;
+    min-height: 100vh;
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .search-bar {
+            form {
+                display: flex;
+                flex-direction: row;
+                gap: 0px;
+                .search-input{
+                    width: 300px;
+                    height: 40px;
+                    border-radius: 8px 0px 0px 8px;
+                    border: 1px solid $text-color;
+                    padding-left: 10px;
+                }
+                .my-btn1{
+                    height: 40px;
+                    border-radius: 0px 8px 8px 0px;
+                    padding: 0px 5px;
+                }
+            }
+        }
+        .filter-bar {
+            form {
+                display: flex;
+                flex-direction: row;
+                gap: 0px;
+                #category-filter{
+                    height: 40px;
+                    border-radius: 8px 0px 0px 8px;
+                    border: 1px solid $text-color;
+               }
+               .my-btn1{
+                    background-color: black;
+                    height: 40px;
+                    border-radius: 0px 8px 8px 0px;
+                    padding: 0px 5px;
+                    &:hover {
+                        color: black;
+                        background-color: $main-color;
+                        border: 1px solid black;
+                    }
+            }
+            }
+        }
+    }
+    .table {
+        margin-bottom: 10px;
+        td {
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .print {
+                @extend .my-btn1;
+                background-color: black;
+                padding: 0px 5px;
+                &:hover {
+                    background-color: $main-color;
+                    color: black;
+                }
+            }
+        }
+        .fst {color: $ninth-color;}
+        .scd{color: $primary-color;}
+        .thd {color: $sixth-color;}
+        #des-field {
+            white-space: nowrap;
+        }
+        input {
+            height: 20px;
+            width: 100%;
+        }
+        #status {
+            color: $ninth-color;
+            select[name="status"] {
+                border: transparent;
+                background-color: transparent;
+                font-size: 14px;
+                option {
+                    font-size: 16px;
+                    &:first-child {
+                        color: $eleven-color;
+                    }
+                    &:nth-child(2) {
+                        color: $primary-color2;
+                    }
+                    &:nth-child(3) {
+                        color: $ninth-color;
+                    }
+                    &:nth-child(4) {
+                        color: $sixth-color;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .grid {
+        display: grid;
+        column-gap: 25px;
+        row-gap: 15px;
+        grid-template-areas: 
+        'chart chart top '
+        'chart chart top '
+        'sales sold cus';
+        grid-template-columns: 30% 30% 30%;
+        .chart {
+            grid-area: chart;
+            @extend .content-board;
+            padding: 10px;
+            margin: 10px 0px;
+        }
+        .top-sell{
+            grid-area: top;
+            @extend .content-board;
+            padding: 10px;
+            margin: 10px 0px;
+            width: 100%;
+            #top-sell-board {
+                ul{
+                    li {
+                        margin: 10px 0px;
+                        padding: 10px 0px;
+                        border: 2px solid $tenth-color;
+                        display: grid;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        grid-template-areas: 
+                            'img name '
+                            'img price '
+                            'img sold';
+                        grid-template-columns: 20% 95%;
+                            img {
+                                grid-area: img;
+                                height: 50px;
+                            }
+                            .pro-name {
+                                grid-area: name; 
+                            }
+                            .pro-pri {
+                                grid-area: price;
+                                font-weight: 600;
+                            }
+                            .pro-sold {
+                                grid-area: sold;
+                                font-size: 12px;
+                            }
+                    }
+                }
+            }
+        }
+        .total {
+            @extend .content-board;
+            padding: 10px;
+            margin: 0px;
+            div {
+                border-radius: 20px;
+                width: 36px;
+                height: 36px;
+                i {
+                    color: $main-color;
+                    padding: 10px;
+                }
+            }
+        }
+        #sales {
+            grid-area: sales;
+            div {
+                background-color: $primary-color;
+            }
+        }
+        #sold {
+            grid-area: sold;
+            div {
+                background-color: $twelve-color;
+            }
+        }
+        #cus {
+            grid-area: cus;
+            width: 100%;
+            div {
+                background-color: $ninth-color;
+            }
+        }
+    }
+}
+
+#pm {
+    .table {
+        .infoM {
+            height: 100px;
+            .img-pdt {
+                height: 100%;
+            }
+        }
+    }
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    z-index: 1001;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 30vw;
+
+    form {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            #category {
+                width: 309px;
+            }
+            #discount {
+                width: 309px;
+            }
+            label {
+                width: 150px;
+                margin-right: 50px;
+            }
+            #choose-img {
+                @extend .my-btn1;
+                margin: 20px 0px;
+                padding: 6px;
+                width: fit-content;
+                height: fit-content;
+                text-align: center;
+            }
+    
+            select {
+                width: 200px;
+                height: 30px;
+                border: 2px solid $third-color;
+            }
+        }
+        .btn-layout {
+            display: flex;
+            flex-direction: row;
+            gap: 10;
+            justify-content: space-between;
+            button {
+                width: 200px;
+            }
+        }
+    }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}

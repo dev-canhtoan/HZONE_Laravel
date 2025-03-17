@@ -1,0 +1,311 @@
+.main-logo {
+    min-width: 150px;
+    min-height: 46px;
+    width: 12%;    
+}
+
+.content-board {
+    background-color: $main-color;
+    border-radius: 5px;
+    margin: 18px 0px;
+    border: 2px solid $third-color;
+}
+
+.pdt-card {
+    @extend .content-board;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: $main-color;
+    padding: 1.25em;
+    width: 14em;
+    height: 310px;
+    #dis-tag{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: $sixth-color;
+        p {
+            position: relative;
+            top: -30px;
+            left: 10px;
+            font-size: 12px;
+            color: $main-color;
+            border-radius: 2px;
+        }
+    }
+    #pdt-title {
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .sold-out {
+        position: absolute;
+    }
+    .img-pdt {
+        height: 14.375em;
+        width: 14.375em;
+    }
+
+    .price {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+    &:hover {
+        .img-pdt {
+            transition: transform 0.3s ease-in-out; 
+            transform: translateY(-8px);
+        }  
+        #pdt-title {
+            color: $fouthteen-color;
+        }
+        #dis-tag{
+            animation: shake 1s;
+            transform-origin: left top;
+        }
+        .sold-out {
+            animation: shake 1s;
+            transform-origin: center;
+            z-index: 1001;
+        }
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-between;
+}
+.text-field {
+    width: 300px;
+    height: 30px;
+    padding-left: 5px;
+    border: 2px solid $third-color;
+}
+
+.countdown {
+    ul {
+        padding: 0px;
+        margin-top: 2em;
+
+        li {
+            display: inline-block;
+            font-size: 0.8em;
+            list-style-type: none;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 3px;
+            background-color: $primary-color;
+            color: $main-color;
+            width: 2.7em;
+            border-radius: 5px;
+
+            span {
+                display: block;
+                font-size: 1.8em;
+            }
+        }
+    }
+}
+
+
+.mini-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: $fourth-color;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.my-btn1 {
+    background-color: $primary-color;
+    border: transparent;
+    border-radius: 6px;
+    height: 30px;
+    color: $main-color;
+
+    &:hover {
+        background-color: $main-color;
+        color: $primary-color;
+    }
+}
+
+.my-btn2 {
+    background-color: $main-color;
+    border: transparent;
+    border-radius: 6px;
+    height: 30px;
+    color: $primary-color;
+
+    &:hover {
+        background-color: $primary-color;
+        color: $main-color;
+    }
+}
+
+
+.number-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid $third-color;
+    .minus,
+    .plus {
+        @extend .my-btn2;
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            background-color: $seventh-color;
+            color: black;     
+        }
+    }
+    .value {
+        height: 30px;
+        width: 40px;
+        text-align: center; 
+        border: none;     
+    }
+    .value::-webkit-inner-spin-button,
+        .value::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+
+        .value[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+}
+
+.box-shadow {
+    box-shadow: 3px 0px 10px 0 #EEEFF0, /* Bóng bên phải dưới */
+    -3px -0px 10px 0 #EEEFF0, /* Bóng bên trái trên */
+    0px -3px 10px 0 #EEEFF0, /* Bóng bên phải trên */
+    -0px 3px 10px 0 #EEEFF0; /* Bóng bên trái dưới */
+}
+
+
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: $tenth-color;
+      }
+}
+
+.add-btn {
+    @extend .my-btn1;
+    background-color: $ninth-color;
+    padding: 0px 10px;
+}
+.udt-btn {
+    @extend .my-btn1;
+    padding: 0px 10px;
+}
+.del-btn {
+    @extend .my-btn1;
+    background-color: $sixth-color;
+    padding: 0px 10px;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 10px;
+    text-align: center;
+    gap: 10px;
+    .page-item {
+        color: black;
+        float: left;
+        padding: 10px 16px;
+        text-decoration: none;
+        &.active {
+            background-color: $primary-color;
+            border-radius: 5px;
+            color: white;
+        }
+        &:not(.active) {
+            background-color: $text-color3;
+            border-radius: 5px;
+        }
+        &:hover:not(.active) {
+            background-color: $text-color;
+            border-radius: 5px;
+          }
+      }
+    .page-item-btn{
+        @extend .my-btn2;
+        padding: 8px 8px 0px 8px;
+        background-color: $text-color3;
+        width: 25px;
+        color: black;
+    }
+}
+
+.alert-danger {
+    position: fixed;
+    background-color: $main-color;
+    color: red;
+    right: 40%;
+    top: 4%;
+    border-radius: 8px;
+    padding: 20px;
+    white-space: wrap;
+    width: 400px;
+    text-align: center;
+}
+.alert-success {
+    position: fixed;
+    background-color: $main-color;
+    color: $ninth-color;
+    right: 40%;
+    top: 4%;
+    border-radius: 8px;
+    padding: 20px;
+    white-space: wrap;
+    width: 400px;
+    text-align: center;
+}
+
+
+@keyframes bounce {
+    0%,
+    100% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+}
+
+@keyframes shake {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(5deg);}
+    50% {transform: rotate(-5deg);}
+    75% {transform: rotate(5deg);}
+    100% {transform: rotate(0deg);}
+  }
+  @keyframes moveRight {
+    from {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+      }
+      to {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
+}

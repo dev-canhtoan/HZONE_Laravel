@@ -1,0 +1,53 @@
+@media (max-width: 1600px) {
+    .header {
+        margin: $main-margin;
+    }
+    .home-page-content {
+        margin: $main-margin;
+    }
+    .productPage-content {
+        margin: $main-margin;
+    }
+    .pro-info-page-content {
+        margin: $main-margin;
+    }
+    .cart-page-content {
+        margin: $main-margin;
+    }
+    .footer{
+        margin: $main-margin;
+    }
+    .breadcrumb-content {
+        margin: $main-margin;
+    }
+    .profile-page-content{
+        margin: $main-margin;
+    }
+}
+
+@media (min-width: 1600px) {
+    .productPage-content {
+        margin: $second-margin; 
+    }
+    .header {
+        margin: $second-margin; 
+    }
+    .home-page-content {
+        margin: $second-margin; 
+    }
+    .pro-info-page-content {
+        margin: $second-margin; 
+    }
+    .cart-page-content {
+        margin: $second-margin; 
+    }
+    .footer{
+        margin: $second-margin; 
+    }
+    .breadcrumb-content {
+        margin: $second-margin; 
+    }
+    .profile-page-content{
+        margin: $second-margin; 
+    }
+}

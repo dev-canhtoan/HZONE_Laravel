@@ -1,0 +1,34 @@
+@import './reuse/var';
+@import './reuse/extends';
+@import './reuse/header';
+@import './reuse/footer';
+@import './homePage';
+@import './productPage';
+@import './proInfoPage';
+@import './cartPage';
+@import './logInPage';
+@import './signUpPage';
+@import './reuse/adminHeader';
+@import './reuse/navMenu';
+@import './adminPage';
+@import './checkoutPage';
+@import './profilePage';
+@import './mediaQuery';
+
+* {
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.layout3 {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    color: black;
+}
+

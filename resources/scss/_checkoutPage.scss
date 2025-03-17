@@ -1,0 +1,32 @@
+.checkout-page {
+    .checkout-page-content {
+        background-color: $second-color;
+        margin: 50px 35% 100px 35%;
+        padding: 20px;
+        border-radius: 8px;
+        h2 {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed black;
+        }
+        h4 {
+            padding: 10px 0px;
+        }
+        h3 {
+            padding: 5px 0px;
+        }
+        p {
+            padding-bottom: 10px;
+            border-bottom: 2px dashed black;
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            button {
+                @extend .my-btn1;
+                padding: 0px 5px;
+            }
+        }
+    }
+}

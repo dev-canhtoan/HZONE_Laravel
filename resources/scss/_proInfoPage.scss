@@ -1,0 +1,286 @@
+.pro-info-page {
+    background-color: $second-color;
+    padding-bottom: 5em;
+
+    .pro-info-page-content {
+        .fisrt-pro-info {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            @extend .content-board;
+            .fst-clm {
+                position: relative;
+                .img-pdt {
+                    margin: 0px;
+                    @extend .content-board;
+                    background-color: $main-color;
+                    height: 380px;
+                    width: auto;
+                }
+                .sold-out {
+                    position: absolute;
+                    right: 50px;
+                    top: 30px;
+                    width: 300px;
+                }
+            }
+
+            .scd-clm {
+                padding: 0px 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                .mini-info {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                }
+
+                .pro-price {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    position: relative;
+                    ul {
+                        margin: 0px;
+                    }
+                    #dis-tag{
+                        position: absolute;
+                        top:-80px;
+                        left: -400px;
+                        color: $sixth-color;
+                        p {
+                            position: relative;
+                            top: -30px;
+                            left: 10px;
+                            font-size: 12px;
+                            color: $main-color;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+
+                .rv-info {
+                    flex-direction: column;
+                    display: flex;
+                    gap: 15px;
+                    line-height: 24px;
+
+                    h4 {
+                        padding: 5px;
+                        border-bottom: 2px solid $third-color;
+                    }
+                }
+            }
+
+            .thrd-clm {
+                .buy-form {
+                    @extend .mini-form;
+                    background-color: $main-color;
+                    gap: 20px;
+                    
+                    .buy-btn {
+                            @extend .my-btn1;
+                            width: 100%;
+                    }
+                    #popup {
+                        width: 20vw;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .payment-btn {
+                            width: 100%;
+                            background-color: $ninth-color;
+                            @extend .my-btn1;
+                            &:hover {
+                                background-color: $main-color;
+                                border: 2px solid $third-color;
+                                color: $ninth-color;
+                            }
+                        }
+                        .vnpay {
+                            @extend .my-btn1;
+                        }
+                        .momo {
+                            @extend .my-btn1;
+                            background-color: $thirteen-color;
+                            &:hover {
+                                background-color: $main-color;
+                                border: 2px solid $third-color;
+                                color: $thirteen-color;
+                            }
+                        }
+                        .zalo {
+                            @extend .my-btn1;
+                        background-color: $primary-color2;
+                        width: 100%;
+                        &:hover {
+                            background-color: $main-color;
+                            border: 2px solid $third-color;
+                            color: $primary-color2;
+                            border: 1px solid $primary-color2;
+                        }
+                        }
+                        .del-btn {
+                            width: 100%;
+                            &:hover {
+                                background-color: $main-color;
+                                border: 2px solid $sixth-color;
+                                color: $sixth-color;
+                            }
+                        }
+                    }
+                    .add-btn {
+                        @extend .my-btn2;
+                        border: 2px solid $third-color;
+                    }
+
+                    #fix {
+                        text-align: center;
+                        font-size: 14px;
+                        padding-top: 6px;
+                    }
+
+                    .like-btn {
+                        @extend .my-btn2;
+                        border: 2px solid $third-color;
+                        background-color: $fourth-color;
+                    }
+                }
+            }
+        }
+
+        .description {
+            @extend .content-board;
+            padding: 20px;
+
+            h4 {
+                border-bottom: 2px solid $third-color;
+            }
+
+            p {
+                margin: 10px 0px;
+                line-height: 24px;
+            }
+
+            .info-pro-table {
+                border-collapse: collapse;
+                width: 60%;
+                td,
+                th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+                }
+                td:first-child {
+                    width: 30%;
+                    background-color: $seventh-color;
+                }
+            }
+        }
+
+        .pro-rate {
+            @extend .content-board;
+            padding: 20px;
+            height: fit-content;
+            min-height: 100px;
+            form {
+                margin-top: 10px;
+                #rating {
+                    margin-right: 50px;
+                    float: left;
+                    &:not(:checked)>label{
+                        &:hover {
+                            color: $star-color;
+                        }
+                        &:hover~label {
+                            color: $star-color;
+                        }
+                    }
+                    &>input {
+                        display: none;
+                        &:checked~label {
+                            color: $star-color;
+                            &:hover {
+                                color: $star-color2;
+                            }
+                        }
+                        &:checked+label:hover{
+                            color: $star-color2;
+                        } 
+                    }
+                    &>label {
+                        color: #ddd;
+                        float: right;
+                        &:before {
+                            margin: 5px;
+                            font-size: 1.25em;
+                            font-family: FontAwesome;
+                            display: inline-block;
+                            content: "\f005";
+                        }
+                        &:hover~input:checked~label{
+                            color: $star-color2;
+                        }
+                        &:checked~label:hover~label {
+                            color: $star-color2;
+                        }
+                    }
+                }
+                #comment {
+                    float: left;
+                    margin-right: 20px;
+                }
+                button {
+                    margin-bottom: 20px;
+                    padding: 5px;
+                }
+            }   
+            .rate-list {
+                margin-top: 20px;
+                .star-rating {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 40px;
+                    .star-rating-card{
+                        display: flex;
+                        flex-direction: row;
+                        width: 50%;
+                        margin: 10px 0px;
+                        .bar {
+                            background-color: $text-color3;
+                            width: 80%;
+                            border-radius: 5px;
+                            color: $main-color;
+                            margin: 0px 10px;
+                            .fill-bar {
+                                background-color: $primary-color;
+                                border-radius: inherit;
+                            }
+                        }
+                    }
+                }
+                .rate-card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    border-bottom: 1px solid $tenth-color;
+                    p {
+                        color: $text-color;
+                    }
+                    #cmt {
+                        color: black;
+                    }
+                }
+            }
+        }
+        .relate-product-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

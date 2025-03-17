@@ -1,0 +1,114 @@
+.log-in {
+    .nav-signup {
+        @extend .my-btn1;
+        line-height: 2;
+        text-align: center;
+        background-color: $main-color;
+        color: $primary-color;
+        width: 100%;
+
+        &:hover {
+            background-color: $primary-color;
+            border: 2px solid $third-color;
+            color: $main-color;
+        }
+    }
+
+    .login-form {
+        @extend .content-board;
+        @extend .box-shadow;
+        padding: 20px;
+        background-color: $main-color;
+        margin: 18vh 34vw;
+
+        p {
+            text-align: center;
+            color: $text-color;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .form-control {
+                border: 2px solid $third-color;
+                height: 40px;
+                padding-left: 5px;
+            }
+
+            a {
+                font-size: 13px;
+                color: $primary-color2;
+                
+            }
+
+            p {
+                text-align: center;
+                color: $text-color;
+                margin: 0px;
+            }
+
+            .login-btn {
+                @extend .my-btn1;
+                &:hover {
+                    background-color: $main-color;
+                    border: 2px solid $third-color;
+                    color: $primary-color;
+                }
+            }
+            .gg-btn {
+                @extend .my-btn1;
+                width: 100%;
+                background-color: black;
+                &:hover {
+                    background-color: $main-color;
+                    color: black;
+                    border: 1px solid black;
+                }
+            }
+            .fb-btn {
+                @extend .my-btn1;
+                width: 100%;
+                background-color: $primary-color2;
+                &:hover {
+                    background-color: $main-color;
+                    border: 2px solid $third-color;
+                    color: $primary-color;
+                }
+            }
+
+            .nav-signup {
+                background-color: $ninth-color;
+                color: $main-color;
+                &:hover {
+                    background-color: $main-color;
+                    color: $ninth-color;
+                }
+            }
+        }
+    }
+    .verify-btn {
+        @extend .my-btn1;
+        background-color:black;
+        &:hover {
+            color: black;
+            border: 2px solid black;
+        }
+    }
+    .resend-module {
+        display: flex;
+        justify-content: space-between;
+        #resend {
+            cursor: pointer;
+            color: $primary-color;
+            text-align: start;
+            font-size: 14px;
+            margin-bottom: 20px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

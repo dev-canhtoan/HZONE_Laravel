@@ -1,0 +1,47 @@
+    .signup-form {
+        @extend .content-board;
+        @extend .box-shadow;
+        padding: 20px;
+        background-color: $main-color;
+        margin: 8vh 35vw;
+        p{
+            text-align: center;
+            color: $text-color;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .form-control {
+                border: 2px solid $third-color;
+                height: 40px;
+                padding-left: 5px;
+            }
+            p{
+                text-align: center;
+                color: $text-color;
+                margin: 0px;
+            }
+            .login-btn {
+                @extend .my-btn1;
+                &:hover {
+                    background-color: $main-color;
+                    border: 2px solid $third-color;
+                    color: $primary-color;
+                }
+            }
+            .nav-signup {
+                @extend .my-btn1;
+                line-height: 2;
+                text-align: center;
+                background-color: $ninth-color;    
+                width: 100%;            
+                &:hover {
+                    background-color: $main-color;
+                    border: 2px solid $third-color;
+                    color: $ninth-color;
+                }
+            }
+        }
+    }

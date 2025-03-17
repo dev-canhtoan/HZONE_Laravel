@@ -1,0 +1,127 @@
+header {
+    background-color: $primary-color;
+    height: 80px;
+
+    .header {
+        padding: 12px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        #link-home {
+            @extend .main-logo;
+            display: block;
+            margin-right: 1em;
+            .logo {
+                width: 130%;
+            }
+        }
+
+        .search-bar {
+            background-color: $main-color;
+            height: 40px;
+            width: 40rem;
+            border-radius: 8px;
+            margin: auto 0px;
+
+            form {
+                .search-input {
+                    width: 85%;
+                    height: 40px;
+                    border-radius: 8px 0px 0px 8px;
+                    border: 0;
+                    padding-left: 10px;
+                }
+                .btn-search {
+                    height: 40px;
+                    background-color: transparent;
+                    border-color: transparent;
+                    color: $primary-color;
+                    border-radius: 8px 0px 0px 8px;
+                }
+            }
+
+            #searchResults {
+                position: absolute;
+                right: inherit;
+                top: 50px;
+                border-radius: 8px;
+                z-index: 1000;
+                width: inherit;
+                border: 1px solid $second-color;
+                ul {
+                    li {
+                        background-color: $main-color;
+                        padding: 15px 0px 0px 0px;
+                        a {
+                            display: grid;
+                            grid-template-areas: 
+                                'img name '
+                                'img price ';
+                            grid-template-columns: 10% 90%;
+                            img {
+                                grid-area: img;
+                                height: 50px;
+                            }
+                            .pro-name {
+                                grid-area: name; 
+                            }
+                            .pro-pri {
+                                grid-area: price;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+                p {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 5px;
+                }
+            }
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            color: $main-color;
+
+            .menu-link {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 15px;
+                gap: 5px;
+                color: $main-color;
+                text-align: center;
+                padding: 3px;
+                min-width: 65px;
+                i {
+                    text-align: center;
+                }
+
+                #cartfix {
+                    position: relative;
+                    left: 7px;
+                }
+
+                #cart-count {
+                    font-size: 12px;
+                    color: $main-color;
+                    background: red;
+                    border-radius: 50%;
+                    padding: 0px 3px;
+                    position: relative;
+                    left: -6px;
+                    top: -10px;
+                }
+
+                &:hover {
+                    background-color: $main-color;
+                    color: $primary-color;
+                    border-radius: 8px;
+                    padding: 3px;
+                }
+            }
+        }
+    }
+}

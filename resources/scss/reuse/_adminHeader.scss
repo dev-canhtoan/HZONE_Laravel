@@ -1,0 +1,57 @@
+.admin-header {
+    background-color: $primary-color;
+    color: $main-color;
+    height: 50px;
+    padding: 6px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    i {
+        padding-top: 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    a {
+        @extend .main-logo;
+        display: block;
+        
+        .logo {
+            width: 130%;
+        }
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        &:hover .dropdown-content {
+            display: block;
+        }
+        .drop-btn {
+            background-color: transparent;
+            color: $main-color;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right:10px;
+            background-color: $main-color;
+            border-radius: 5px;
+            a {
+                color: black;
+                padding: 12px 0px 0px 4px;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                &:hover {
+                    background-color: $seventh-color;
+                    border-radius: inherit;
+                }
+              }
+          }
+    }
+}
